@@ -1,0 +1,11 @@
+1. create a dev branche based on the main branche
+2. create branche part 1 and implement part 1 of the tutorial (https://docs.djangoproject.com/en/4.2/intro/tutorial01/)...todo
+    a) implement the solution from scratch...todo
+    b) start and fix the solution...todo
+    c) permanently push the changes with command...todo
+3. create the branche part 2 of tutorilal part 2 (https://docs.djangoproject.com/en/4.2/intro/tutorial02/)...todo
+    a) implement the solution from scratch...todo
+    b) start and fix the solution...todo
+    c) permanently push the changes with command...todo
+    ...
+    
