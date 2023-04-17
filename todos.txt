@@ -9,3 +9,4 @@
     c) permanently push the changes with command...todo
     ...
     
+...step 8
