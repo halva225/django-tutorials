@@ -44,14 +44,19 @@ class QuestionModelPersistingTests(TestCase):
 
         # test init
         # NOTE: an empty db schema will be created
-        before = Question(question_text = "test", pub_date = timezone.now())
-        before.save()
+
+        max = 10
+
+        for x in range(max):
+            before = Question(question_text = "test {}".format(x), pub_date = timezone.now())
+            before.save()
+            print(before)
 
         # test execution
         after = Question.objects.count()
 
         # test assert
-        self.assertEqual(1, after)
+        self.assertEqual(max, after)
 
 
     def test_returns_questions(self):
