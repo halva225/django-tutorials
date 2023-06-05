@@ -37,6 +37,22 @@ class QuestionModelPersistingTests(TestCase):
         # test assert
         self.assertQuerysetEqual(q1, [])
 
+    def test_returns_correct_number_of_questions(self):
+        """
+        A test which returns a correct number of questions.
+        """
+
+        # test init
+        # NOTE: an empty db schema will be created
+        before = Question(question_text = "test", pub_date = timezone.now())
+        before.save()
+
+        # test execution
+        after = Question.objects.count()
+
+        # test assert
+        self.assertEqual(1, after)
+
 
     def test_returns_questions(self):
         """
