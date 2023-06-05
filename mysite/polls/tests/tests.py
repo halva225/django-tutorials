@@ -17,7 +17,39 @@ class QuestionModelPersistingTests(TestCase):
         # NOTE: an empty db schema will be created
 
         # test execution
+        q1 = Question.objects.all()
+
+        # test assert
+        self.assertQuerysetEqual(q1, [])
+
+
+    def test_no_data_with_filtering_returns_no_questions(self):
+        """
+        A questions dataset with zero records and filtering returnes no data.
+        """
+
+        # test init
+        # NOTE: an empty db schema will be created
+
+        # test execution
         q1 = Question.objects.filter(question_text__startswith="What")
 
         # test assert
         self.assertQuerysetEqual(q1, [])
+
+
+    def test_returns_questions(self):
+        """
+        A questions dataset which returnes records.
+        """
+
+        # test init
+        # NOTE: an empty db schema will be created
+        before = Question(question_text = "test", pub_date = timezone.now())
+        before.save()
+
+        # test execution
+        after = Question.objects.all()
+
+        # test assert
+        self.assertQuerysetEqual(after, [before])
