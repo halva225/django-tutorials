@@ -15,7 +15,8 @@ def dfs(visited, graph, node):  #function for dfs
     if node not in visited:
         print (node)
         visited.add(node)
-        for neighbour in graph[node]:
+        temp = graph[node]
+        for neighbour in temp:
             dfs(visited, graph, neighbour)
 
 
