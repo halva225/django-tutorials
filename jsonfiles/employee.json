@@ -1,0 +1,16 @@
+{
+    "firstName": "John",
+    "lastName": "Kennedy",
+    "adress": [
+        {
+            "street": "abc",
+            "city": "Zurich",
+            "state": "ZH"
+        },
+        {
+            "street": "xyz",
+            "city": "Bremgarten",
+            "state": "AG"
+        }
+    ]
+}
