@@ -38,4 +38,4 @@ def printDistances(distances, token1Length, token2Length):
             print(int(distances[t1][t2]), end=" ")
         print()
         
-levenshteinDistanceDP("kelm", "hello")
+levenshteinDistanceDP("melon", "hello")
