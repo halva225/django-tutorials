@@ -1,5 +1,5 @@
 def calcDictDistance(word, numWords):
-    file = open('1-1000.txt', 'r') 
+    file = open('mysite/polls/algorithms/1-1000.txt', 'r') 
     lines = file.readlines() 
     file.close()
     dictWordDist = []
@@ -22,3 +22,5 @@ def calcDictDistance(word, numWords):
         wordDetails = currWordDist.split("-")
         closestWords.append(wordDetails[1])
     return closestWords
+
+print(calcDictDistance("pape", 3))
